@@ -9,10 +9,10 @@ for i in a:
         
         else:
             prime = True
-    
+
     if prime == True:
         print(str(i) + "は素数です")
-    
+
     else:
         print(str(i) + "は素数ではありません")
 

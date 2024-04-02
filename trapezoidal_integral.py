@@ -10,9 +10,9 @@ def f(x):
 N = 100
 a = 0
 b = math.pi / 2
-h = (b -  a) / N
+h = (b - a) / N
 S = 0
-for i in range(N):
-    S += h / 2 * (f(a) + f(a + h))
+for i in range(1, N + 1):
+    S += (h / 2) * (f(a + ((i - 1) * h)) + f(a + (i * h)))
 
 print(S)

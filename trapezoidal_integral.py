@@ -14,7 +14,7 @@ def f2(x):
     return y
 
 
-def trapezoidal_integral(f, a, b, n):
+def trapezoidal_integral(f, a = 0, b = 1, n = 100):
     
     h = (b - a) / n
     S = 0
@@ -24,10 +24,10 @@ def trapezoidal_integral(f, a, b, n):
     return S
 
 
-list = [[sin, 0, math.pi / 2, 50],
+li = [[sin, 0, math.pi / 2, 50],
         [f1, 0, 1, 100],
         [f2, -100, 100, 1000]
         ]
 
-for i in list:
+for i in li:
     print(trapezoidal_integral(*i))

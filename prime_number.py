@@ -1,5 +1,5 @@
 def prime_number(n):
-    if type(n) is not  int:
+    if not isinstance(n, int):
         return("error")
     
     elif n <= 0:
@@ -7,21 +7,18 @@ def prime_number(n):
     
     prime = True
     if n == 1:
-        prime = False
+        return False
 
     for i in range(2,n):
 
         if n % i == 0:
-            prime = False
-            break
+            return False
+    
+    return True
 
-        else:
-            prime = True
+li = [61, 10, 3.14, -1, 0, 1, "0"]
 
-    return(prime)
-
-list = [61, 10, 3.14, -1, 0, 1, "0"]
-for i in list:
+for i in li:
     print(prime_number(i))
 
 

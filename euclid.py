@@ -4,19 +4,13 @@ import math
 
 def euclid(a, b):
     while b != 0:
-        r = a % b
-        a = b
-        b = r
-    
+        a, b = b, a % b
+
     return a
 
 
 def mutually_prime(a, b):
-    if euclid(a, b) == 1:
-        return True
-    
-    else:
-        return False
+    return euclid(a, b) == 1
 
 
 p = 0

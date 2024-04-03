@@ -23,9 +23,11 @@ def trapezoidal_integral(f, a, b, n):
 
     return S
 
+
 list = [[sin, 0, math.pi / 2, 50],
         [f1, 0, 1, 100],
         [f2, -100, 100, 1000]
         ]
+
 for i in list:
     print(trapezoidal_integral(*i))

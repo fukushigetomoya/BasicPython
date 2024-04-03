@@ -18,7 +18,9 @@ def mutually_prime(a, b):
     else:
         return False
 
+
 p = 0
+
 for i in range(100000):
     a = random.randint(1, 10000)
     b = random.randint(1, 10000)

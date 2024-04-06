@@ -1,11 +1,26 @@
-list = [[10, 20], [14, 91], [91, 14]]
+import random
+import math
 
 
-# TODO
-for a, b in list:
+def euclid(a, b):
     while b != 0:
-        r = a % b
-        a = b
-        b = r
+        a, b = b, a % b
 
-    print(a)
+    return a
+
+
+def mutually_prime(a, b):
+    return euclid(a, b) == 1
+
+
+p = 0
+
+for i in range(100000):
+    a = random.randint(1, 10000)
+    b = random.randint(1, 10000)
+
+    if mutually_prime(a, b) == True:
+        p += 1
+
+print(p / 100000)
+print(6 / (math.pi ** 2))

@@ -1,19 +1,24 @@
-a = [61, 10]
-prime = True
+def prime_number(n):
+    if not isinstance(n, int):
+        return("error")
+    
+    elif n <= 0:
+        return("error")
+    
+    prime = True
+    if n == 1:
+        return False
 
-for i in a:
-    for j in range(2,i):
-        if i % j == 0:
-            prime = False
-            break
-        
-        else:
-            prime = True
+    for i in range(2,n):
 
-    if prime == True:
-        print(str(i) + "は素数です")
+        if n % i == 0:
+            return False
+    
+    return True
 
-    else:
-        print(str(i) + "は素数ではありません")
+li = [61, 10, 3.14, -1, 0, 1, "0"]
+
+for i in li:
+    print(prime_number(i))
 
 
